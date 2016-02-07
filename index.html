@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>LocalFontAccess shim</title>
+</head>
+<body>
+	<script src="FontAccess.js"></script>
+	<script>
+		FontAccess.key = '<API_KEY>';
+
+		FontAccess.getFonts().then(function (fontDescriptionArray) {
+			fontDescriptionArray.forEach(function (fontDescription) {
+				console.log(fontDescription.family, fontDescription.style);
+			});
+		}, function (err) {
+			console.error(err);
+		});
+
+		FontAccess.getFontBlob('Roboto', 'regular').then(function (file) {
+			var reader = new FileReader();
+			reader.onload = function (event) {
+				console.log(reader.result.byteLength);
+			};
+			reader.readAsArrayBuffer(file);
+		}, function (err) {
+			console.error(err);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "LocalFontAccess-Shim",
+  "version": "1.0.0",
+  "description": "Shim for the Local Font Access API, https://goo.gl/nJuKro, using Google Fonts",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johanholmerin/LocalFontAccess-Shim.git"
+  },
+  "author": "Johan Holmerin <johan@holmer.in>",
+  "devDependencies": {
+    "browser-sync": "^2.11.1"
+  }
+}
